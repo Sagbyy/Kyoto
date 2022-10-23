@@ -116,7 +116,7 @@ nav {
 .acceuil h1 {
     font-family: Merienda One, sans-serif;
     color: #f1f1f1;
-    font-size: 100px;
+    font-size: 75px;
     text-shadow: 0 0 10px black;
     margin-top: 10px;
 }
@@ -152,10 +152,12 @@ nav {
     color: #fff;
 }
 
+
 @media screen and (max-width: 870px) {
     .acceuil {
         height: 650px;
         min-height: auto;
+        background-position: right;
     }
 
     .logo-kyoto {
@@ -163,7 +165,7 @@ nav {
     }
 
     .acceuil h1 {
-        font-size: 60px;
+        font-size: 45px;
     }
 
     .sous-titre {
@@ -185,7 +187,7 @@ nav {
     }
 
     .acceuil h1 {
-        font-size: 50px;
+        font-size: 35px;
     }
 
     .sous-titre {
@@ -199,4 +201,17 @@ nav {
         font-size: 13px;
         margin: 15px auto;
     }
+}
+
+
+/* Section asymétrique */
+
+.section-asym {
+    display: grid;
+    grid-template: 200px repeat(3, auto) / 1fr 600px 1fr;
+    background: #f1f1f1;
+}
+
+.section-asym h2 {
+    grid-area: 1 / 1 / 2 / -1;
 }

@@ -8,7 +8,7 @@ body {
     font-family: Nunito sans, sans-serif;
 }
 
-/* Navigation */
+/*-------------- Navigation --------------*/
 
 nav {
     position: fixed;
@@ -91,7 +91,7 @@ nav {
 }
 
 
-/* Acceuil */
+/*-------------- Acceuil --------------*/
 
 .acceuil {
     width: 100%;
@@ -206,7 +206,7 @@ nav {
 }
 
 
-/* Section asymétrique */
+/*-------------- Section asymétrique --------------*/
 
 
 .section-asym {
@@ -221,7 +221,7 @@ nav {
     justify-content: center;
     align-items: center;
     color: #333;
-    font-size: 50px;
+    font-size: 45px;
     text-transform: uppercase;
     padding-bottom: 20px;
 }
@@ -458,7 +458,7 @@ nav {
 }
 
 
-/* Section Parallax */
+/*-------------- Section Parallax --------------*/
 
 .parallax {
     width: 100%;
@@ -528,14 +528,11 @@ nav {
 }
 
 .carte-principale {
-    transform: scale(1.10);
+    transform: scale(1.08);
+    margin: 25px 20px;
 }
 
-.carte-principale:hover {
-    transform: translateY(1.11);
-}
-
-.cartes-tarifs:not(:nth-child(2)):hover {
+.cartes-tarifs:not(.carte-principale):hover {
     transform: translateY(-5px);
 }
 
@@ -543,7 +540,7 @@ nav {
     text-align: center;
     padding: 25px 20px;
     font-size: 35px;
-    clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
     background: #5c076e;
     color: #f1f1f1;
 }
@@ -558,4 +555,44 @@ nav {
 
 .cartes-tarifs:nth-child(2) h4 {
     background: #33013d;
+}
+
+.cartes-tarifs p {
+    font-size: 18px;
+    padding: 20px 10px;
+    border-top: 1px solid #777;
+}
+
+.cartes-tarifs p:last-of-type {
+    border-bottom: 1px solid #777;
+}
+
+.cartes-tarifs p:nth-child(odd) {
+    background: rgba(195, 195, 195, 0.219);
+}
+
+.cartes-tarifs a {
+    display: block;
+    text-decoration: none;
+    border: 1px solid #333;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    border-radius: 9999px;
+    color: #333;
+    font-size: 18px;
+    line-height: 50px;
+    margin: 20px auto;
+    transition: all 0.2s ease-in-out;
+}
+
+.cartes-tarifs a:hover {
+    background: #333;
+    color: #f1f1f1;
+}
+
+@media screen and (max-width: 520px) {
+    .section-tarifs h3 {
+        font-size: 28px;
+    }
 }

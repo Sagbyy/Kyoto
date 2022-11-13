@@ -8,6 +8,10 @@ body {
     font-family: Nunito sans, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /*-------------- Navigation --------------*/
 
 nav {
@@ -16,6 +20,11 @@ nav {
     width: 100%;
     background: rgb(12, 12, 12);
     z-index: 10;
+}
+
+section{
+    scroll-behavior: smooth;
+
 }
 
 .logo-menu {
@@ -281,8 +290,9 @@ nav {
      padding: 15px;
 }
 
-.bloc button {
+.bloc a {
     border-radius: 9999px;
+    width: 200px;
     outline: none;
     border: 1px solid #333;
     background: #66097B;
@@ -292,10 +302,12 @@ nav {
     margin: 35px auto;
     cursor: pointer;
     display: block;
+    text-decoration: none;
     transition: all 0.2s ease-in-out;
 }
 
-.bloc button:hover {
+
+.bloc a:hover {
     background: #5c076e;
 }
 
@@ -445,9 +457,10 @@ nav {
         width: 100%;
     }
 
-    .bloc button {
+    .bloc a {
         padding: 15px 30px;
         font-size: 15px;
+        width: 160px;
     }
 
     /* Titre principale de la page */
@@ -595,4 +608,105 @@ nav {
     .section-tarifs h3 {
         font-size: 28px;
     }
+}
+
+
+/*------------ Section contact ------------*/
+
+.section-contact {
+    padding-bottom: 100px;
+}
+
+.section-contact h2 {
+    text-align: center;
+    color: #333;
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 50px;
+    padding: 70px 0 0 0;
+}
+
+.section-contact h2 strong {
+    font-weight: 900;
+}
+
+.container-form {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.form-group label {
+    color: #333;
+    font-size: 20px;
+}
+
+.form-group input {
+    display: block;
+    width: 100%;
+    padding: 10px 0px;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 3px solid #aaa;
+    color: #666066;
+    font-size: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-group textarea {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-bottom: 3px solid #aaa;
+    border-radius: 3px;
+    padding: 5px;
+    resize: none;
+    outline: none;
+    font-size: 20px;
+    background: #f1f1f1;
+}
+
+.form-group .button-sub {
+    display: block;
+    border: none;
+    width: auto;
+    padding: 15px 60px;
+    background: #5c076e;
+    color: #f1f1f1;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-group .button-sub:hover {
+    background: #33013d;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+    border-bottom: 3px solid #5c076e;
+}
+
+.form-group label:focus {
+    color: #5c076e;
+}
+
+@media screen and (max-width: 460px) {
+    .section-contact h2 {
+        font-size: 35px;
+    }
+}
+
+/*--------------- Footer ---------------*/
+
+footer {
+    border-top: 1px solid #333;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
 }
